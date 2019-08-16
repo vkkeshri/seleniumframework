@@ -2,17 +2,18 @@ package com.qa.hubspot.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 import com.qa.hubspot.base.BasePage;
 import com.qa.hubspot.constants.Constants;
 import com.qa.hubspot.util.ElementActions;
+import com.qa.hubspot.util.TimeUtil;
 
 public class HomePage extends BasePage{
 	
 	ElementActions elementActions;
 	
 	By homePageHeader = By.xpath("//h1[@class='private-header__heading']");
-	By accountMenu = By.xpath("//*[@id='account-menu']/svg");
+	By parentContactMenu = By.id("nav-primary-contacts-branch");
+	By childContactMenu = By.id("nav-secondary-contacts");
 	
 	
 	public HomePage(WebDriver driver){
@@ -33,7 +34,13 @@ public class HomePage extends BasePage{
 		return elementActions.getElementText(homePageHeader);
 	}
 	
-	public void accountMenuClick(){
-		
+	public void clickOnContacts(){
+		elementActions.elementClick(parentContactMenu);
+		TimeUtil.shortWait();
+	}
+	
+	public ContactsPage goToContactsPage(){
+		elementActions.elementClick(childContactMenu);
+		return new ContactsPage(driver);
 	}
 }

@@ -4,8 +4,8 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.qa.hubspot.base.BasePage;
@@ -21,7 +21,7 @@ public class HomePageTest {
 	public LoginPage loginPage;
 	public HomePage homePage;
 	
-	@BeforeMethod
+	@BeforeTest
 	public void setUp(){
 		basePage = new BasePage();
 		prop = basePage.initialize_properties();
@@ -44,9 +44,8 @@ public class HomePageTest {
 		Assert.assertEquals(homePage.getHomePageHeader(), Constants.HOME_PAGE_HEADER);
 	}
 	
-	@AfterMethod
+	@AfterTest
 	public void tearDown(){
 		driver.quit();
 	}
-
 }
