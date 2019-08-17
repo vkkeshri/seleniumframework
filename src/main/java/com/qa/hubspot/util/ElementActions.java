@@ -45,6 +45,7 @@ public class ElementActions extends BasePage{
 	}
 	
 	public void elementClick(By locator){
+		waitForElementPresent(locator);
 		getElement(locator).click();
 	}
 	
@@ -63,6 +64,7 @@ public class ElementActions extends BasePage{
 	}
 	
 	public String getElementText(By locator){
+		waitForElementPresent(locator);
 		return getElement(locator).getText();
 	}
 

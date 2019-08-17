@@ -3,7 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="com.qa.hubspot.test.LoginPageTest"/>
+      <class name="com.qa.hubspot.test.ContactsPageTest"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.qa.hubspot.test.ContactsPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="createNewContactsTest" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- com.qa.hubspot.test.ContactsPageTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

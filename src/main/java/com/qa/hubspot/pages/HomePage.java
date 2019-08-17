@@ -37,10 +37,11 @@ public class HomePage extends BasePage{
 	public void clickOnContacts(){
 		elementActions.elementClick(parentContactMenu);
 		TimeUtil.shortWait();
+		elementActions.elementClick(childContactMenu);
 	}
 	
 	public ContactsPage goToContactsPage(){
-		elementActions.elementClick(childContactMenu);
+		clickOnContacts();
 		return new ContactsPage(driver);
 	}
 }

@@ -1,69 +1,256 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="12" passed="12">
+<testng-results skipped="0" failed="3" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Hub Spot Sanity Test Automation Suit" duration-ms="32636" started-at="2019-08-15T16:37:25Z" finished-at="2019-08-15T16:37:58Z">
+  <suite name="Default suite" duration-ms="136636" started-at="2019-08-16T18:14:14Z" finished-at="2019-08-16T18:16:31Z">
     <groups>
     </groups>
-    <test name="Hub Spot App Test Cases" duration-ms="32636" started-at="2019-08-15T16:37:25Z" finished-at="2019-08-15T16:37:58Z">
-      <class name="com.qa.hubspot.test.LoginPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.test.LoginPageTest@23223dd8]" name="setUp" is-config="true" duration-ms="18703" started-at="2019-08-15T22:07:25Z" finished-at="2019-08-15T22:07:44Z">
+    <test name="Default test" duration-ms="136636" started-at="2019-08-16T18:14:14Z" finished-at="2019-08-16T18:16:31Z">
+      <class name="com.qa.hubspot.test.ContactsPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.test.ContactsPageTest@290dbf45]" name="setUp" is-config="true" duration-ms="34684" started-at="2019-08-16T23:44:15Z" finished-at="2019-08-16T23:44:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyLoginPageTitle()[pri:1, instance:com.qa.hubspot.test.LoginPageTest@23223dd8]" name="verifyLoginPageTitle" duration-ms="4568" started-at="2019-08-15T22:07:44Z" finished-at="2019-08-15T22:07:48Z">
+        <test-method status="FAIL" signature="createNewContactsTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.qa.hubspot.test.ContactsPageTest@290dbf45]" name="createNewContactsTest" duration-ms="11348" started-at="2019-08-16T23:44:50Z" data-provider="getContactsData" finished-at="2019-08-16T23:45:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[amit@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Amit]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Nigam]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Manager]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.id: uid-ctrl-5 (tried for 4 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AERISIN-006', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\VDK\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:60787}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c859cedda89cd65dfece12009b45d814]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: uid-ctrl-5 (tried for 4 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AERISIN-006', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\VDK\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:60787}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: c859cedda89cd65dfece12009b45d814
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.qa.hubspot.pages.ContactsPage.createContact(ContactsPage.java:43)
+	at com.qa.hubspot.test.ContactsPageTest.createNewContactsTest(ContactsPageTest.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLoginPageTitle -->
-        <test-method status="PASS" signature="verifySignUpLinkText()[pri:2, instance:com.qa.hubspot.test.LoginPageTest@23223dd8]" name="verifySignUpLinkText" duration-ms="148" started-at="2019-08-15T22:07:48Z" finished-at="2019-08-15T22:07:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySignUpLinkText -->
-        <test-method status="PASS" signature="verifyAccountText()[pri:3, instance:com.qa.hubspot.test.LoginPageTest@23223dd8]" name="verifyAccountText" duration-ms="62" started-at="2019-08-15T22:07:49Z" finished-at="2019-08-15T22:07:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAccountText -->
-        <test-method status="PASS" signature="verifyEmailAddressText()[pri:4, instance:com.qa.hubspot.test.LoginPageTest@23223dd8]" name="verifyEmailAddressText" duration-ms="78" started-at="2019-08-15T22:07:49Z" finished-at="2019-08-15T22:07:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyEmailAddressText -->
-        <test-method status="PASS" signature="verifyPasswordText()[pri:5, instance:com.qa.hubspot.test.LoginPageTest@23223dd8]" name="verifyPasswordText" duration-ms="61" started-at="2019-08-15T22:07:49Z" finished-at="2019-08-15T22:07:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyPasswordText -->
-        <test-method status="PASS" signature="verifyShowPasswordText()[pri:6, instance:com.qa.hubspot.test.LoginPageTest@23223dd8]" name="verifyShowPasswordText" duration-ms="103" started-at="2019-08-15T22:07:49Z" finished-at="2019-08-15T22:07:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyShowPasswordText -->
-        <test-method status="PASS" signature="verifyForgotPasswordLink()[pri:7, instance:com.qa.hubspot.test.LoginPageTest@23223dd8]" name="verifyForgotPasswordLink" duration-ms="116" started-at="2019-08-15T22:07:49Z" finished-at="2019-08-15T22:07:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyForgotPasswordLink -->
-        <test-method status="PASS" signature="verifyRememberMeCheckbox()[pri:8, instance:com.qa.hubspot.test.LoginPageTest@23223dd8]" name="verifyRememberMeCheckbox" duration-ms="96" started-at="2019-08-15T22:07:49Z" finished-at="2019-08-15T22:07:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyRememberMeCheckbox -->
-        <test-method status="PASS" signature="verifyRememberMeText()[pri:9, instance:com.qa.hubspot.test.LoginPageTest@23223dd8]" name="verifyRememberMeText" duration-ms="58" started-at="2019-08-15T22:07:49Z" finished-at="2019-08-15T22:07:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyRememberMeText -->
-        <test-method status="PASS" signature="verifyGoogleButton()[pri:10, instance:com.qa.hubspot.test.LoginPageTest@23223dd8]" name="verifyGoogleButton" duration-ms="127" started-at="2019-08-15T22:07:49Z" finished-at="2019-08-15T22:07:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGoogleButton -->
-        <test-method status="PASS" signature="verifySSOButton()[pri:11, instance:com.qa.hubspot.test.LoginPageTest@23223dd8]" name="verifySSOButton" duration-ms="104" started-at="2019-08-15T22:07:49Z" finished-at="2019-08-15T22:07:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySSOButton -->
-        <test-method status="PASS" signature="loginTestWithCorrectCredential()[pri:12, instance:com.qa.hubspot.test.LoginPageTest@23223dd8]" name="loginTestWithCorrectCredential" duration-ms="7570" started-at="2019-08-15T22:07:49Z" finished-at="2019-08-15T22:07:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTestWithCorrectCredential -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.test.LoginPageTest@23223dd8]" name="tearDown" is-config="true" duration-ms="816" started-at="2019-08-15T22:07:57Z" finished-at="2019-08-15T22:07:58Z">
+        </test-method> <!-- createNewContactsTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.test.ContactsPageTest@290dbf45]" name="tearDown" is-config="true" duration-ms="853" started-at="2019-08-16T23:45:01Z" finished-at="2019-08-16T23:45:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.hubspot.test.LoginPageTest -->
-    </test> <!-- Hub Spot App Test Cases -->
-  </suite> <!-- Hub Spot Sanity Test Automation Suit -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.test.ContactsPageTest@290dbf45]" name="setUp" is-config="true" duration-ms="32106" started-at="2019-08-16T23:45:02Z" finished-at="2019-08-16T23:45:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="createNewContactsTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.qa.hubspot.test.ContactsPageTest@290dbf45]" name="createNewContactsTest" duration-ms="8779" started-at="2019-08-16T23:45:34Z" data-provider="getContactsData" finished-at="2019-08-16T23:45:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mayur@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mayur]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Kumar]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[SSE]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.id: uid-ctrl-5 (tried for 4 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AERISIN-006', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\VDK\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:60874}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: dadd077c11519c414f86fb7763a440ff]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: uid-ctrl-5 (tried for 4 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AERISIN-006', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\VDK\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:60874}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: dadd077c11519c414f86fb7763a440ff
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.qa.hubspot.pages.ContactsPage.createContact(ContactsPage.java:43)
+	at com.qa.hubspot.test.ContactsPageTest.createNewContactsTest(ContactsPageTest.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewContactsTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.test.ContactsPageTest@290dbf45]" name="tearDown" is-config="true" duration-ms="877" started-at="2019-08-16T23:45:43Z" finished-at="2019-08-16T23:45:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.hubspot.test.ContactsPageTest@290dbf45]" name="setUp" is-config="true" duration-ms="34875" started-at="2019-08-16T23:45:44Z" finished-at="2019-08-16T23:46:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="createNewContactsTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.qa.hubspot.test.ContactsPageTest@290dbf45]" name="createNewContactsTest" duration-ms="11328" started-at="2019-08-16T23:46:19Z" data-provider="getContactsData" finished-at="2019-08-16T23:46:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[vinod@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Vinod]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Kumar]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[QD]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.id: uid-ctrl-5 (tried for 4 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AERISIN-006', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\VDK\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:60958}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: be6f045af374e3f97825b32585b862de]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: uid-ctrl-5 (tried for 4 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'AERISIN-006', ip: '192.168.0.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: C:\Users\VDK\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:60958}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: be6f045af374e3f97825b32585b862de
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.qa.hubspot.pages.ContactsPage.createContact(ContactsPage.java:43)
+	at com.qa.hubspot.test.ContactsPageTest.createNewContactsTest(ContactsPageTest.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewContactsTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.hubspot.test.ContactsPageTest@290dbf45]" name="tearDown" is-config="true" duration-ms="932" started-at="2019-08-16T23:46:30Z" finished-at="2019-08-16T23:46:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.hubspot.test.ContactsPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

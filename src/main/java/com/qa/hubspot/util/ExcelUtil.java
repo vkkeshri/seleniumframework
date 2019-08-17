@@ -14,7 +14,7 @@ public class ExcelUtil {
 	public static Sheet sheet;
 	public static String TEST_DATA_SHEET_PATH = "/Users/VDK/Desktop/eclipse/workspace/seleniumframework/src/main/java/com/qa/hubspot/testdata/HubSpotTestData.xlsx";
 	
-	public Object[][] getTestData(String sheetName){
+	public static Object[][] getTestData(String sheetName){
 		
 		FileInputStream file = null;
 		
