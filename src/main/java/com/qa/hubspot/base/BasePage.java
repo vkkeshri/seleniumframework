@@ -3,6 +3,7 @@ package com.qa.hubspot.base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -55,8 +56,8 @@ public class BasePage {
 	public Properties initialize_properties(){
 		prop = new Properties();
 		try {
-			FileInputStream ip = new FileInputStream("C:/Users/VDK/Desktop/eclipse/workspace/seleniumframework/"
-					+ "src/main/java/com/qa/hubspot/configuration/config.properties");
+			//FileInputStream ip = new FileInputStream("C:/AerisAutomation/eclipse/workspace/seleniumframework/src/main/java/com/qa/hubspot/configuration/config.properties");
+			InputStream ip = getClass().getClassLoader().getResourceAsStream("config.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
