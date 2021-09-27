@@ -12,7 +12,7 @@ public class ExcelUtil {
 	
 	public static Workbook book;
 	public static Sheet sheet;
-	public static String TEST_DATA_SHEET_PATH = "/Users/VDK/Desktop/eclipse/workspace/seleniumframework/src/main/java/com/qa/hubspot/testdata/HubSpotTestData.xlsx";
+	public static String TEST_DATA_SHEET_PATH = "/seleniumframework/src/main/java/com/qa/hubspot/testdata/HubSpotTestData.xlsx";
 	
 	public static Object[][] getTestData(String sheetName){
 		
